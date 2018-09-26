@@ -11,7 +11,6 @@ logo = """
 """
 
 print(logo)
-print(►*****************************************◄)
 print('| 1- Rating Pages With Access Token.    |')
 print('| 2- Like Pages With Access Token.      |')
 print('| 3- Follow Accounts With Access Token. |')
@@ -20,7 +19,6 @@ print('| 5- Share Posts With Access Token.     |')
 print('| 6- Poking Acc With Access Token.      |')
 print('| 7- Friend Request With Access Token.  |')
 print('| 8- Share Posts With Page Token.       |')
-print(►*****************************************◄)
 ask = input('Enter Number>>')
 
 if (int(ask) == 1):
@@ -34,7 +32,7 @@ if (int(ask) == 1):
 		url = 'https://graph.facebook.com/' +p_user+ '/ratings?Name=hector&rating=' +ratings_number+ '&access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
 elif (int(ask) == 2):
@@ -47,7 +45,7 @@ elif (int(ask) == 2):
 		url = 'https://graph.facebook.com/' +p_user+ '/likes?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
 elif (int(ask) == 3):
@@ -60,7 +58,7 @@ elif (int(ask) == 3):
 		url = 'https://graph.facebook.com/' +acc_id+ '/subscribers?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
 elif (int(ask) == 4):
@@ -73,7 +71,7 @@ elif (int(ask) == 4):
 		url = 'https://graph.facebook.com/' +post_id+ '/likes?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
 elif (int(ask) == 5):
@@ -86,7 +84,7 @@ elif (int(ask) == 5):
 		url = 'https://graph.facebook.com/' +post_id+ '/sharedposts?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
 elif (int(ask) == 6):
@@ -99,7 +97,7 @@ elif (int(ask) == 6):
 		url = 'https://graph.facebook.com/' +acc_id+ '/pokes?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 elif (int(ask) == 7):
 
@@ -112,10 +110,10 @@ elif (int(ask) == 7):
 		url = 'https://graph.facebook.com/' +acc_id+ '/friendrequests?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
 		
-elif (int(ask) == 8)
+elif (int(ask) == 8):
 	post_id = input('Enter Your Post ID >> ')
 	page_token = input('Enter Access Tokens File >> ')
 	opener = open(page_token, 'r').readlines()
@@ -125,5 +123,5 @@ elif (int(ask) == 8)
 		url = 'https://graph.facebook.com/' +post_id+ '/sharedposts?access_token=' +token+ '&method=post'
 		http = requests.post(url)
 		content = http.content
-		data = json.loads.(content.decode("utf-8"))
+		data = json.loads(content.decode("utf-8"))
 		print(data)
